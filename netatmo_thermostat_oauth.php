@@ -1,16 +1,19 @@
 <?php
-// script créé par Connected Object pour eedomus
-// ce script permet de générer un XML facilement lisible par eedomus
-// généré à partir des données Netatmo récupérées via Oauth
-// https://dev.netatmo.com/doc/authentication
-// encodage iso-8859-1 pour les accents
-// Version 1 / 14 novembre 2014		/ 1ère version disponible
-// Version 2 / 19 mai 2017		    / Mise à jour API Netatmo
-// Version 2.1 / 20 mai 2017        / Mise à jour API Netatmo (correction plannings) by @Thibautg16
-// Version 2.2 / 20 mai 2017        / Mise à jour API Netatmo (ajout battery_percent) by @Thibautg16
-// Version 2.3 / 7 aout 2017        / Correction cache
-// Version 2.4 / 11 août 2017       / Ajout informations signal Wifi & RF by @Thibautg16
-
+# Copyright (C) 2017 @Thibautg16
+# This file is part of NetatmoThermostatApp <https://github.com/Thibautg16/NetatmoThermostatApp>.
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with This program. If not, see <http://www.gnu.org/licenses/>.
 
 $MODE_NETATMO = 'netatmo'; // Dans ce mode, on met une consigne temporaire
 $MODE_EEDOMUS = 'eedomus'; // Dans ce mode, on maintient la température de consigne
