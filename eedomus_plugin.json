@@ -1,14 +1,13 @@
 {
     "plugin_id": "netatmotherm",
-    "name_fr": "Thermostat",
+    "name_fr": "Thermostat Netatmo App",
     "icon": "Netatmo_Thermo.png",
     "version": "3.0",
     "creation_date": "2017-12-03",
     "modification_date": "2017-12-04",
-    "author": "<a href='https://twitter.com/Thibautg16' target='_blank'>@Thibautg16</a> / <a href='http://thibaut.ovh/' target='_blank'>thibaut.ovh</a>",
-    "description_fr": "Contrôlez votre Thermostat Netatmo depuis vôtre box Eedomus",
-    "description_en": "Control your Netatmo Thermostat",
-    "forum_link": "",
+    "author": "<a href='https://twitter.com/Thibautg16' target='_blank'>@Thibautg16</a> / <a href='http://thibaut.ovh/' target='_blank'>thibaut.ovh</a> / <a href='https://github.com/Thibautg16/NetatmoThermostatApp' target='_blank'> GitHub </a>",
+    "description_fr": "Contrôlez votre <a href='https://www.netatmo.com/fr-FR/product/energy/'>Thermostat Netatmo</a> depuis vôtre box Eedomus",
+    "forum_link": "http://forum.eedomus.com/viewtopic.php?f=50&t=6240",
     "parameters":
         [
             {
