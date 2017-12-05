@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [v3.1] by @Thibautg16 - 2017-12-05 
+- Change : Description de l'application
+- Added : Plus de consigne disponible (xx,5)
+
 ## [v3.0] by @Thibautg16 - 2017-12-05 
 - New : Création de l'application à partir du script existant
 - Added : Canal "Thermostat - Relais Wifi" : puissance du signal wifi entre le relais et votre box/routeur

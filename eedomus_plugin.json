@@ -2,11 +2,12 @@
     "plugin_id": "netatmotherm",
     "name_fr": "Thermostat Netatmo App",
     "icon": "Netatmo_Thermo.png",
-    "version": "3.0",
+    "version": "3.1",
     "creation_date": "2017-12-03",
     "modification_date": "2017-12-04",
-    "author": "<a href='https://twitter.com/Thibautg16' target='_blank'>@Thibautg16</a> / <a href='http://thibaut.ovh/' target='_blank'>thibaut.ovh</a> / <a href='https://github.com/Thibautg16/NetatmoThermostatApp' target='_blank'> GitHub </a>",
-    "description_fr": "Contrôlez votre <a href='https://www.netatmo.com/fr-FR/product/energy/'>Thermostat Netatmo</a> depuis vôtre box Eedomus",
+    "author": "<a href='https://twitter.com/Thibautg16' target='_blank'>@Thibautg16</a> / <a href='https://github.com/Thibautg16/NetatmoThermostatApp' target='_blank'> GitHub </a>",
+    "description_fr": "Gestion avancée de votre<a href='https://www.netatmo.com/fr-FR/product/energy/'>Thermostat Netatmo</a> depuis votre box Eedomus",
+    "description_en": "Advanced management of your <a href='https://www.netatmo.com/product/energy/'>Netatmo thermostat</a> from your Eedomus box",
     "forum_link": "http://forum.eedomus.com/viewtopic.php?f=50&t=6240",
     "parameters":
         [
@@ -91,9 +92,13 @@
                 "values":
                     [
                         { "value": "17", "icon": "consigne64.png", "description": "17°C", "http_url": "http://localhost/script/?exec=netatmo_thermostat_oauth.php", "http_type": "GET",  "http_params": "&oauth_code=[VAR1]&[VAR2]&maintain_setpoint=[VAR3]&setpoint_temperature=17" },
+                        { "value": "17,5", "icon": "consigne64.png", "description": "18°C", "http_url": "http://localhost/script/?exec=netatmo_thermostat_oauth.php", "http_type": "GET",  "http_params": "&oauth_code=[VAR1]&[VAR2]&maintain_setpoint=[VAR3]&setpoint_temperature=17.5" },
                         { "value": "18", "icon": "consigne64.png", "description": "18°C", "http_url": "http://localhost/script/?exec=netatmo_thermostat_oauth.php", "http_type": "GET",  "http_params": "&oauth_code=[VAR1]&[VAR2]&maintain_setpoint=[VAR3]&setpoint_temperature=18" },
+                        { "value": "18,5", "icon": "consigne64.png", "description": "18°C", "http_url": "http://localhost/script/?exec=netatmo_thermostat_oauth.php", "http_type": "GET",  "http_params": "&oauth_code=[VAR1]&[VAR2]&maintain_setpoint=[VAR3]&setpoint_temperature=18.5" },
                         { "value": "19", "icon": "consigne64.png", "description": "19°C", "http_url": "http://localhost/script/?exec=netatmo_thermostat_oauth.php", "http_type": "GET",  "http_params": "&oauth_code=[VAR1]&[VAR2]&maintain_setpoint=[VAR3]&setpoint_temperature=19" },
+                        { "value": "19,5", "icon": "consigne64.png", "description": "18°C", "http_url": "http://localhost/script/?exec=netatmo_thermostat_oauth.php", "http_type": "GET",  "http_params": "&oauth_code=[VAR1]&[VAR2]&maintain_setpoint=[VAR3]&setpoint_temperature=19.5" },
                         { "value": "20", "icon": "consigne64.png", "description": "20°C", "http_url": "http://localhost/script/?exec=netatmo_thermostat_oauth.php", "http_type": "GET",  "http_params": "&oauth_code=[VAR1]&[VAR2]&maintain_setpoint=[VAR3]&setpoint_temperature=20" },
+                        { "value": "20,5", "icon": "consigne64.png", "description": "18°C", "http_url": "http://localhost/script/?exec=netatmo_thermostat_oauth.php", "http_type": "GET",  "http_params": "&oauth_code=[VAR1]&[VAR2]&maintain_setpoint=[VAR3]&setpoint_temperature=20.5" },
                         { "value": "21", "icon": "consigne64.png", "description": "21°C", "http_url": "http://localhost/script/?exec=netatmo_thermostat_oauth.php", "http_type": "GET",  "http_params": "&oauth_code=[VAR1]&[VAR2]&maintain_setpoint=[VAR3]&setpoint_temperature=21" },
                         { "value": "22", "icon": "consigne64.png", "description": "22°C", "http_url": "http://localhost/script/?exec=netatmo_thermostat_oauth.php", "http_type": "GET",  "http_params": "&oauth_code=[VAR1]&[VAR2]&maintain_setpoint=[VAR3]&setpoint_temperature=22" },
                         { "value": "23", "icon": "consigne64.png", "description": "23°C", "http_url": "http://localhost/script/?exec=netatmo_thermostat_oauth.php", "http_type": "GET",  "http_params": "&oauth_code=[VAR1]&[VAR2]&maintain_setpoint=[VAR3]&setpoint_temperature=23" }
