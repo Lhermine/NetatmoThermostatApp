@@ -3,6 +3,9 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [v3.2] by @Thibautg16 - 2017-12-05 
+Fixed : Description consigne
+
 ## [v3.1] by @Thibautg16 - 2017-12-05 
 - Change : Description de l'application
 - Added : Plus de consigne disponible (xx,5)
