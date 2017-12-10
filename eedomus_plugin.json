@@ -2,12 +2,12 @@
     "plugin_id": "netatmotherm",
     "name_fr": "Thermostat Netatmo App",
     "icon": "Netatmo_Thermo.png",
-    "version": "3.2",
+    "version": "4.0",
     "creation_date": "2017-12-03",
-    "modification_date": "2017-12-05",
+    "modification_date": "2017-12-10",
     "author": "<a href='https://twitter.com/Thibautg16' target='_blank'>@Thibautg16</a> / <a href='https://github.com/Thibautg16/NetatmoThermostatApp' target='_blank'> GitHub </a>",
-    "description_fr": "Gestion avancée de votre<a href='https://www.netatmo.com/fr-FR/product/energy/'>Thermostat Netatmo</a> depuis votre box Eedomus",
-    "description_en": "Advanced management of your <a href='https://www.netatmo.com/product/energy/'>Netatmo thermostat</a> from your Eedomus box",
+    "description_fr": "Gestion avancée de votre <a href='https://www.netatmo.com/fr-FR/product/energy/' target='_blank'>Thermostat Netatmo</a> depuis votre box Eedomus.<br/>Application personnalisable, vous pouvez choisir d'installer ou non les canaux optionnels",
+    "description_en": "Advanced management of your <a href='https://www.netatmo.com/product/energy/' target='_blank'>Netatmo thermostat</a> from your Eedomus box.<br/>Customizable application, you can choose to install or not the optional channels",
     "forum_link": "http://forum.eedomus.com/viewtopic.php?f=50&t=6240",
     "parameters":
         [
@@ -39,8 +39,30 @@
                 "parameter": "maintainmode",
                 "description": "Mode manuel :",
                 "xtype": "combo",
+                "default_value": "away",
                 "field": "width:110, allowBlank:false, store:[['away', 'Permanent'], [1, '1H'], [2, '2H'], [3, '3H'], [4, '4H'], [5, '5H'], [6, '6H']], editable: false, shadow: true, triggerAction: 'all', typeAhead:true"
-            }
+            },
+            {
+                "parameter": "combo_relais_wifi",
+                "description": "Informations signal wifi du relais :",
+                "xtype": "combo",
+                "default_value": 0,
+                "field": "width:110, allowBlank:false, store:[[0, 'Non'], [1, 'Oui']], editable: false, shadow: true, triggerAction: 'all', typeAhead:true"
+            },
+            {
+                "parameter": "combo_thermo_batt",
+                "description": "Informations batterie thermostat :",
+                "xtype": "combo",
+                "default_value": 0,
+                "field": "width:110, allowBlank:false, store:[[0, 'Non'], [1, 'Oui']], editable: false, shadow: true, triggerAction: 'all', typeAhead:true"
+            },            
+            {
+                "parameter": "combo_thermo_rf",
+                "description": "Informations signal radio (RF) :",
+                "xtype": "combo",
+                "default_value": 0,
+                "field": "width:110, allowBlank:false, store:[[0, 'Non'], [1, 'Oui']], editable: false, shadow: true, triggerAction: 'all', typeAhead:true"
+            }            
         ],
     "scripts":
         [
@@ -159,6 +181,7 @@
             },
             {
                 "device_id": "relais_wifi",
+                "create":"plugin.parameters.combo_relais_wifi",
                 "module_id": "51",
                 "parent_id": "temperature",
                 "type": "http",
@@ -184,6 +207,7 @@
             },
             {
                 "device_id": "thermo_batt",
+                "create":"plugin.parameters.combo_thermo_batt",                
                 "module_id": "51",
                 "parent_id": "temperature",
                 "icon": "Batterie.png",
@@ -205,6 +229,7 @@
             },
             {
                 "device_id": "thermo_rf",
+                "create":"plugin.parameters.combo_thermo_rf",                
                 "module_id": "51",
                 "parent_id": "temperature",
                 "type": "http",
