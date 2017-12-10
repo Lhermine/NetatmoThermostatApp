@@ -2,7 +2,7 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
-## [v4.0] by @Thibautg16 - 2017-12-09 
+## [v4.0] by @Thibautg16 - 2017-12-10 
 - Added : Personnalisation de l'installation de l'application
 
 ## [v3.2] by @Thibautg16 - 2017-12-05 
