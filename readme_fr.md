@@ -24,7 +24,7 @@ Vous êtes ensuite redirigés vers le site **Eedomus**
 
 Copiez le *code d'autorisation Oauth Netatmo* obtenu sur la page eedomus qui est restée ouverte dans votre browser Internet ainsi que les adresses *MAC du thermostat* et du *relais*. 
 
-Voici les différents champs à renseigner:
+*Voici les différents champs à renseigner:
 
 * [Optionnel] - Nom personnalisé : personnalisation du nom de votre périphérique
 * [Obligatoire] - Pièce : vous devez définir dans qu'elle pièce se trouve votre thermostat
