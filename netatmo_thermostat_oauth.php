@@ -454,7 +454,7 @@ else
 		{
 			$cached_xml .= '<boiler>0</boiler>';
 		}
-    else $cached_xml .= '<boiler>50</boiler>';
+    		else $cached_xml .= '<boiler>50</boiler>';
 	}
 	
 	//$cached_xml .= '<token>'.$access_token.'</token>';
