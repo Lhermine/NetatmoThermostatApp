@@ -138,8 +138,8 @@
                 "utilisation_id":"4",
                 "parameters":
                     {
-				        "VAR1": "plugin.parameters.oauth_code",
-				        "VAR2": "module_id=plugin.parameters.thermostat_mac&device_id=plugin.parameters.relais_mac",
+			"VAR1": "plugin.parameters.oauth_code",
+			"VAR2": "module_id=plugin.parameters.thermostat_mac&device_id=plugin.parameters.relais_mac",
                         "VAR3": "plugin.parameters.maintainmode",   
                         "value_type": "list",
                         "ignore_errors": 3,
@@ -192,8 +192,8 @@
                 "utilisation_id":"35",
                 "parameters":
                     {
-				        "VAR1": "plugin.parameters.oauth_code",
-				        "VAR2": "module_id=plugin.parameters.thermostat_mac&device_id=plugin.parameters.relais_mac",
+			"VAR1": "plugin.parameters.oauth_code",
+			"VAR2": "module_id=plugin.parameters.thermostat_mac&device_id=plugin.parameters.relais_mac",
                         "VAR3": "plugin.parameters.maintainmode",   
                         "value_type": "list",
                         "ignore_errors": 3,
@@ -220,8 +220,8 @@
                 "value_unit": "%",
                 "parameters":
                     {
-				        "VAR1": "plugin.parameters.oauth_code",
-				        "VAR2": "module_id=plugin.parameters.thermostat_mac&device_id=plugin.parameters.relais_mac",
+			"VAR1": "plugin.parameters.oauth_code",
+			"VAR2": "module_id=plugin.parameters.thermostat_mac&device_id=plugin.parameters.relais_mac",
                         "VAR3": "plugin.parameters.maintainmode",   
                         "value_type": "float",
                         "ignore_errors": 3,
