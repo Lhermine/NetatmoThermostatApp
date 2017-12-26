@@ -102,8 +102,8 @@
                 "value_unit": "°C",
                 "parameters":
                     {
-				        "VAR1": "plugin.parameters.oauth_code",
-				        "VAR2": "module_id=plugin.parameters.thermostat_mac&device_id=plugin.parameters.relais_mac",
+			"VAR1": "plugin.parameters.oauth_code",
+			"VAR2": "module_id=plugin.parameters.thermostat_mac&device_id=plugin.parameters.relais_mac",
                         "VAR3": "plugin.parameters.maintainmode",   
                         "value_type": "list",
                         "ignore_errors": 3,
@@ -178,7 +178,7 @@
                 "values":
                     [
                         { "value": "0", "icon": "chauffage_b2.png", "description": "Off"},
-			{ "value": "50", "icon": "chauffage64.png", "description": "Confort"}
+			{ "value": "50", "icon": "chauffage64.png", "description": "Confort"},
                         { "value": "100", "icon": "chauffage_b1.png", "description": "On"}
                     ]        
             },
