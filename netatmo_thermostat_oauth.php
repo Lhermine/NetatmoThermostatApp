@@ -16,7 +16,7 @@
 # along with This program. If not, see <http://www.gnu.org/licenses/>.
 
 $MODE_NETATMO = 'netatmo'; // Dans ce mode, on met une consigne temporaire
-$MODE_EEDOMUS = 'eedomus'; // Dans ce mode, on maintient la température de consigne
+$MODE_EEDOMUS = 'eedomus'; // Dans ce mode, on maintient la tempÃ©rature de consigne
 $CACHE_DURATION = 2; // minutes
 $api_url = 'https://api.netatmo.net';
 $is_action = false; // Action ou mode capteur ?
@@ -34,7 +34,7 @@ function sdk_netatmo_html($extension_module)
 		$ret .= '<br>';
 		$ret .= '<br>';
 		$ret .= '<br>';
-		$ret .= "Voici la liste des modules dont vous pouvez modifier la température de consigne:";
+		$ret .= "Voici la liste des modules dont vous pouvez modifier la tempÃ©rature de consigne:";
 		$ret .= '<br>';
 		$ret .= '<dl>';
 	}
@@ -43,7 +43,7 @@ function sdk_netatmo_html($extension_module)
 	{
 		$id = $extension_module[$i]['id'];
 
-		// attention aux "&" qui doivent être convertis
+		// attention aux "&" qui doivent Ãªtre convertis
 		//$ret .= '<name>'.htmlspecialchars($extension_module[$i]['name']).'</name>';
 		$ret .= '<dt>'.$extension_module[$i]['name'].'</dt>';
 		$ret .= '<dd>Adresse MAC du thermostat Netatmo : <input onclick="this.select();" type="text" size="17" readonly="readonly" value="'.$id.'"</dd>';
@@ -115,17 +115,17 @@ if (!$is_action && $_GET['mode'] != 'verify' && $time_from_last < $CACHE_DURATIO
 
 if (strlen($prev_code) > 1 && $code == $prev_code)
 {
-  // on reprend le dernier refresh_token seulement s'il correspond au même code
+  // on reprend le dernier refresh_token seulement s'il correspond au mÃªme code
 	$refresh_token = loadVariable('refresh_token');
 	$expire_time = loadVariable('expire_time');
-	// s'il n'a pas expiré, on peut reprendre l'access_token
+	// s'il n'a pas expirÃ©, on peut reprendre l'access_token
   if (time() < $expire_time)
   {
     $access_token = loadVariable('access_token');
   }
 }
 
-// on a déjà un token d'accés non expiré pour le code demandée
+// on a dÃ©jÃ  un token d'accÃ©s non expirÃ© pour le code demandÃ©e
 if ($access_token == '')
 {
 	if (strlen($refresh_token) > 1)
@@ -136,7 +136,7 @@ if ($access_token == '')
 	}
 	else
 	{
-		// 1ère utilisation aprés obtention du code
+		// 1Ã¨re utilisation aprÃ©s obtention du code
 		$grant_type = 'authorization_code';
 		$redirect_uri = 'https://secure.eedomus.com/sdk/plugins/netatmo_thermostat/callback.php';
 		$scope = 'read_thermostat write_thermostat';
@@ -185,7 +185,7 @@ if ($_GET['mode'] == 'verify')
 	echo "Votre code d'authentification Netatmo est : ".'<input onclick="this.select();" type="text" size="40" readonly="readonly" value="'.$code.'" />';
 	echo '<br>';
 	echo '<br>';
-	echo "Vous pouvez le copier/coller dans le paramètrage de votre périphérique eedomus.";
+	echo "Vous pouvez le copier/coller dans le paramÃ¨trage de votre pÃ©riphÃ©rique eedomus.";
 
 	$url_devices = $api_url.'/api/getthermostatsdata?app_type=app_thermostat&access_token='.$access_token;
 	$result_devices = httpQuery($url_devices);
@@ -229,7 +229,7 @@ if($device_id == '' || $module_id == '')
 	die();
 }
 
-// Les critères sont réunis pour demander d'effectuer une action
+// Les critÃ¨res sont rÃ©unis pour demander d'effectuer une action
 if ($is_action)
 {
 	// Valeurs possibles pour le mode
@@ -241,7 +241,7 @@ if ($is_action)
 	$xml .= '<netatmo>';
 	$xml .= '<status>';
 
-	// On va passer en mode manuel et forcer une température
+	// On va passer en mode manuel et forcer une tempÃ©rature
 	if($setpoint_temp != '')
 	{
 		$mode;
@@ -259,7 +259,7 @@ if ($is_action)
 		sdk_netatmo_set_temperature($setpoint_temp, $mode, abs($maintain_setpoint));
 		$xml .= 'ok';
 	}
-	// On va seulement changer de mode sans modifier la température
+	// On va seulement changer de mode sans modifier la tempÃ©rature
 	else if(in_array($setpoint_mode, $setpoint_mode_valid_values))
 	{
 		$url = $api_url.'/api/setthermpoint?access_token='.$access_token.'&device_id='.$device_id.'&module_id='.$module_id.'&setpoint_mode='.$setpoint_mode;
@@ -280,13 +280,13 @@ if ($is_action)
 	$xml .= '</netatmo>';
 	echo $xml;
 }
-// On effectue une lecture des données
+// On effectue une lecture des donnÃ©es
 else
 {
 	$url_devices = $api_url.'/api/getthermostatsdata?access_token='.$access_token.'&device_id='.$device_id.'&module_id='.$module_id;
 	$result_devices = httpQuery($url_devices);
   //var_dump($url_devices, $result_devices);
-	// gestion offline pour débug
+	// gestion offline pour dÃ©bug
 	//saveVariable('result_devices', $result_devices); die();
 	//$result_devices = loadVariable('result_devices');
 
@@ -319,8 +319,8 @@ else
 	  }
 	  
       $temperature = $json_devices['body']['devices'][0]["modules"][$i]['measured']['temperature'];
-	  $battery_percent = $json_devices['body']['devices'][0]["modules"][$i]['battery_percent'];
-	  $rf_status = $json_devices['body']['devices'][0]["modules"][$i]['rf_status'];
+      $battery_percent = $json_devices['body']['devices'][0]["modules"][$i]['battery_percent'];
+      $rf_status = $json_devices['body']['devices'][0]["modules"][$i]['rf_status'];
       $relay_command = $json_devices['body']['devices'][0]["modules"][$i]['therm_relay_cmd'];
     }
 
@@ -345,7 +345,7 @@ else
 		// Temperature manuellement imposee
 		$cached_xml .= '<setpoint_temperature>'.$setpoint_temperature.'</setpoint_temperature>';
 
-		// Verification: besoin de l'imposer à nouveau ?
+		// Verification: besoin de l'imposer Ã  nouveau ?
 		// Oui si on est en mode eedomus et proche du temps imparti
 		$maintain_mode = loadVariable('maintain_mode');
 		if($maintain_mode != $MODE_NETATMO)
@@ -387,7 +387,7 @@ else
 		$week_offset = $now - $monday;
 		$week_offset = $week_offset / 60;
 		
-		// Parcourt pour repérer la zone actuelle de programmation dans la semaine
+		// Parcourt pour repÃ©rer la zone actuelle de programmation dans la semaine
 		for ($i = 0; $i < sizeof($json_devices['body']['devices'][0]['modules'][0]['therm_program_list'][0]['timetable']); $i++)
 		{
 			$timetable_offset = $json_devices['body']['devices'][0]['modules'][0]['therm_program_list'][0]['timetable'][$i]['m_offset'];
@@ -454,6 +454,7 @@ else
 		{
 			$cached_xml .= '<boiler>0</boiler>';
 		}
+    else $cached_xml .= '<boiler>50</boiler>';
 	}
 	
 	//$cached_xml .= '<token>'.$access_token.'</token>';
