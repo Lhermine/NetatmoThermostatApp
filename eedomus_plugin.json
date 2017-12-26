@@ -82,8 +82,8 @@
                 "icon": "thermometer.png",
                 "parameters":
                     {
-				        "VAR1": "plugin.parameters.oauth_code",
-				        "VAR2": "module_id=plugin.parameters.thermostat_mac&device_id=plugin.parameters.relais_mac",
+			"VAR1": "plugin.parameters.oauth_code",
+			"VAR2": "module_id=plugin.parameters.thermostat_mac&device_id=plugin.parameters.relais_mac",
                         "VAR3": "plugin.parameters.maintainmode",                        
                         "value_type": "float",
                         "ignore_errors": 3,
@@ -113,7 +113,9 @@
                     },
                 "values":
                     [
-                        { "value": "17", "icon": "consigne64.png", "description": "17°C", "http_url": "http://localhost/script/?exec=netatmo_thermostat_oauth.php", "http_type": "GET",  "http_params": "&oauth_code=[VAR1]&[VAR2]&maintain_setpoint=[VAR3]&setpoint_temperature=17" },
+                        { "value": "16", "icon": "consigne64.png", "description": "16°C", "http_url": "http://localhost/script/?exec=netatmo_thermostat_oauth.php", "http_type": "GET",  "http_params": "&oauth_code=[VAR1]&[VAR2]&maintain_setpoint=[VAR3]&setpoint_temperature=16" },
+			{ "value": "16.5", "icon": "consigne64.png", "description": "16.5°C", "http_url": "http://localhost/script/?exec=netatmo_thermostat_oauth.php", "http_type": "GET",  "http_params": "&oauth_code=[VAR1]&[VAR2]&maintain_setpoint=[VAR3]&setpoint_temperature=16.5" },
+			{ "value": "17", "icon": "consigne64.png", "description": "17°C", "http_url": "http://localhost/script/?exec=netatmo_thermostat_oauth.php", "http_type": "GET",  "http_params": "&oauth_code=[VAR1]&[VAR2]&maintain_setpoint=[VAR3]&setpoint_temperature=17" },
                         { "value": "17.5", "icon": "consigne64.png", "description": "17.5°C", "http_url": "http://localhost/script/?exec=netatmo_thermostat_oauth.php", "http_type": "GET",  "http_params": "&oauth_code=[VAR1]&[VAR2]&maintain_setpoint=[VAR3]&setpoint_temperature=17.5" },
                         { "value": "18", "icon": "consigne64.png", "description": "18°C", "http_url": "http://localhost/script/?exec=netatmo_thermostat_oauth.php", "http_type": "GET",  "http_params": "&oauth_code=[VAR1]&[VAR2]&maintain_setpoint=[VAR3]&setpoint_temperature=18" },
                         { "value": "18.5", "icon": "consigne64.png", "description": "18.5°C", "http_url": "http://localhost/script/?exec=netatmo_thermostat_oauth.php", "http_type": "GET",  "http_params": "&oauth_code=[VAR1]&[VAR2]&maintain_setpoint=[VAR3]&setpoint_temperature=18.5" },
@@ -164,8 +166,8 @@
                 "utilisation_id":"35",
                 "parameters":
                     {
-				        "VAR1": "plugin.parameters.oauth_code",
-				        "VAR2": "module_id=plugin.parameters.thermostat_mac&device_id=plugin.parameters.relais_mac",
+			"VAR1": "plugin.parameters.oauth_code",
+			"VAR2": "module_id=plugin.parameters.thermostat_mac&device_id=plugin.parameters.relais_mac",
                         "VAR3": "plugin.parameters.maintainmode",   
                         "value_type": "list",
                         "ignore_errors": 3,
@@ -176,6 +178,7 @@
                 "values":
                     [
                         { "value": "0", "icon": "chauffage_b2.png", "description": "Off"},
+			{ "value": "50", "icon": "chauffage64.png", "description": "Confort"}
                         { "value": "100", "icon": "chauffage_b1.png", "description": "On"}
                     ]        
             },
@@ -237,8 +240,8 @@
                 "utilisation_id":"35",
                 "parameters":
                     {
-				        "VAR1": "plugin.parameters.oauth_code",
-				        "VAR2": "module_id=plugin.parameters.thermostat_mac&device_id=plugin.parameters.relais_mac",
+			"VAR1": "plugin.parameters.oauth_code",
+			"VAR2": "module_id=plugin.parameters.thermostat_mac&device_id=plugin.parameters.relais_mac",
                         "VAR3": "plugin.parameters.maintainmode",   
                         "value_type": "list",
                         "ignore_errors": 3,
