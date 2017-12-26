@@ -178,8 +178,8 @@
                 "values":
                     [
                         { "value": "0", "icon": "chauffage_b2.png", "description": "Off"},
-			{ "value": "50", "icon": "chauffage64.png", "description": "Confort"},
-                        { "value": "100", "icon": "chauffage_b1.png", "description": "On"}
+                        { "value": "100", "icon": "chauffage_b1.png", "description": "On"},
+			{ "value": "200", "icon": "chauffage64.png", "description": "Confort"}
                     ]        
             },
             {
