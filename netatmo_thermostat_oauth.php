@@ -454,7 +454,10 @@ else
 		{
 			$cached_xml .= '<boiler>0</boiler>';
 		}
-    		else $cached_xml .= '<boiler>50</boiler>';
+    		else if($relay_command == 200) 
+		{
+			$cached_xml .= '<boiler>200</boiler>'; // mode confort
+		}
 	}
 	
 	//$cached_xml .= '<token>'.$access_token.'</token>';
